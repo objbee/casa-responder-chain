@@ -1,0 +1,406 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F5C3935D412F945A15654F0 /* libPods-casa-responder-chain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FDB706E067E79F169C076039 /* libPods-casa-responder-chain.a */; };
+		9535D2751F29636B0017E063 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9535D2741F29636B0017E063 /* main.m */; };
+		9535D2781F29636B0017E063 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9535D2771F29636B0017E063 /* AppDelegate.m */; };
+		9535D27B1F29636B0017E063 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9535D27A1F29636B0017E063 /* ViewController.m */; };
+		9535D27E1F29636B0017E063 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9535D27C1F29636B0017E063 /* Main.storyboard */; };
+		9535D2801F29636B0017E063 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9535D27F1F29636B0017E063 /* Assets.xcassets */; };
+		9535D2831F29636B0017E063 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9535D2811F29636B0017E063 /* LaunchScreen.storyboard */; };
+		9535D28C1F2963AC0017E063 /* UIResponder+Router.m in Sources */ = {isa = PBXBuildFile; fileRef = 9535D28B1F2963AC0017E063 /* UIResponder+Router.m */; };
+		9535D28F1F2967530017E063 /* ATableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9535D28E1F2967530017E063 /* ATableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		16A5E3959D42B72010F72315 /* Pods-casa-responder-chain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-casa-responder-chain.release.xcconfig"; path = "Pods/Target Support Files/Pods-casa-responder-chain/Pods-casa-responder-chain.release.xcconfig"; sourceTree = "<group>"; };
+		9535D2701F29636B0017E063 /* casa-responder-chain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "casa-responder-chain.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9535D2741F29636B0017E063 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9535D2761F29636B0017E063 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9535D2771F29636B0017E063 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9535D2791F29636B0017E063 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9535D27A1F29636B0017E063 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9535D27D1F29636B0017E063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9535D27F1F29636B0017E063 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9535D2821F29636B0017E063 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9535D2841F29636B0017E063 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9535D28A1F2963AC0017E063 /* UIResponder+Router.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Router.h"; sourceTree = "<group>"; };
+		9535D28B1F2963AC0017E063 /* UIResponder+Router.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Router.m"; sourceTree = "<group>"; };
+		9535D28D1F2967530017E063 /* ATableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATableViewCell.h; sourceTree = "<group>"; };
+		9535D28E1F2967530017E063 /* ATableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATableViewCell.m; sourceTree = "<group>"; };
+		B72DAA1E2A0672175F8BB8BA /* Pods-casa-responder-chain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-casa-responder-chain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-casa-responder-chain/Pods-casa-responder-chain.debug.xcconfig"; sourceTree = "<group>"; };
+		FDB706E067E79F169C076039 /* libPods-casa-responder-chain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-casa-responder-chain.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9535D26D1F29636B0017E063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F5C3935D412F945A15654F0 /* libPods-casa-responder-chain.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		188EDA0D36D0E2895BCE47AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FDB706E067E79F169C076039 /* libPods-casa-responder-chain.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A7ADBF9708064F048FB051D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B72DAA1E2A0672175F8BB8BA /* Pods-casa-responder-chain.debug.xcconfig */,
+				16A5E3959D42B72010F72315 /* Pods-casa-responder-chain.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9535D2671F29636B0017E063 = {
+			isa = PBXGroup;
+			children = (
+				9535D2721F29636B0017E063 /* casa-responder-chain */,
+				9535D2711F29636B0017E063 /* Products */,
+				5A7ADBF9708064F048FB051D /* Pods */,
+				188EDA0D36D0E2895BCE47AD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9535D2711F29636B0017E063 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9535D2701F29636B0017E063 /* casa-responder-chain.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9535D2721F29636B0017E063 /* casa-responder-chain */ = {
+			isa = PBXGroup;
+			children = (
+				9535D2761F29636B0017E063 /* AppDelegate.h */,
+				9535D2771F29636B0017E063 /* AppDelegate.m */,
+				9535D2791F29636B0017E063 /* ViewController.h */,
+				9535D27A1F29636B0017E063 /* ViewController.m */,
+				9535D27C1F29636B0017E063 /* Main.storyboard */,
+				9535D27F1F29636B0017E063 /* Assets.xcassets */,
+				9535D2811F29636B0017E063 /* LaunchScreen.storyboard */,
+				9535D2841F29636B0017E063 /* Info.plist */,
+				9535D2731F29636B0017E063 /* Supporting Files */,
+				9535D28A1F2963AC0017E063 /* UIResponder+Router.h */,
+				9535D28B1F2963AC0017E063 /* UIResponder+Router.m */,
+				9535D28D1F2967530017E063 /* ATableViewCell.h */,
+				9535D28E1F2967530017E063 /* ATableViewCell.m */,
+			);
+			path = "casa-responder-chain";
+			sourceTree = "<group>";
+		};
+		9535D2731F29636B0017E063 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9535D2741F29636B0017E063 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9535D26F1F29636B0017E063 /* casa-responder-chain */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9535D2871F29636B0017E063 /* Build configuration list for PBXNativeTarget "casa-responder-chain" */;
+			buildPhases = (
+				222EFADAC6637FFB9DF014DD /* [CP] Check Pods Manifest.lock */,
+				9535D26C1F29636B0017E063 /* Sources */,
+				9535D26D1F29636B0017E063 /* Frameworks */,
+				9535D26E1F29636B0017E063 /* Resources */,
+				36158CB189B29844993EF295 /* [CP] Embed Pods Frameworks */,
+				F899094ACB9506ACED0344E8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "casa-responder-chain";
+			productName = "casa-responder-chain";
+			productReference = 9535D2701F29636B0017E063 /* casa-responder-chain.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9535D2681F29636B0017E063 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = yuanye;
+				TargetAttributes = {
+					9535D26F1F29636B0017E063 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 9535D26B1F29636B0017E063 /* Build configuration list for PBXProject "casa-responder-chain" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9535D2671F29636B0017E063;
+			productRefGroup = 9535D2711F29636B0017E063 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9535D26F1F29636B0017E063 /* casa-responder-chain */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9535D26E1F29636B0017E063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9535D2831F29636B0017E063 /* LaunchScreen.storyboard in Resources */,
+				9535D2801F29636B0017E063 /* Assets.xcassets in Resources */,
+				9535D27E1F29636B0017E063 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222EFADAC6637FFB9DF014DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		36158CB189B29844993EF295 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-casa-responder-chain/Pods-casa-responder-chain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F899094ACB9506ACED0344E8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-casa-responder-chain/Pods-casa-responder-chain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9535D26C1F29636B0017E063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9535D28F1F2967530017E063 /* ATableViewCell.m in Sources */,
+				9535D27B1F29636B0017E063 /* ViewController.m in Sources */,
+				9535D2781F29636B0017E063 /* AppDelegate.m in Sources */,
+				9535D2751F29636B0017E063 /* main.m in Sources */,
+				9535D28C1F2963AC0017E063 /* UIResponder+Router.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9535D27C1F29636B0017E063 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9535D27D1F29636B0017E063 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9535D2811F29636B0017E063 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9535D2821F29636B0017E063 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9535D2851F29636B0017E063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9535D2861F29636B0017E063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9535D2881F29636B0017E063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B72DAA1E2A0672175F8BB8BA /* Pods-casa-responder-chain.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "casa-responder-chain/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yuanye.casa-responder-chain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9535D2891F29636B0017E063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16A5E3959D42B72010F72315 /* Pods-casa-responder-chain.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "casa-responder-chain/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "yuanye.casa-responder-chain";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9535D26B1F29636B0017E063 /* Build configuration list for PBXProject "casa-responder-chain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9535D2851F29636B0017E063 /* Debug */,
+				9535D2861F29636B0017E063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9535D2871F29636B0017E063 /* Build configuration list for PBXNativeTarget "casa-responder-chain" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9535D2881F29636B0017E063 /* Debug */,
+				9535D2891F29636B0017E063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9535D2681F29636B0017E063 /* Project object */;
+}
