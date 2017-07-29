@@ -10,7 +10,7 @@
 #import "ATableViewCell.h"
 #import "UIResponder+Router.h"
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -54,11 +54,23 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"%s", __func__);
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
 #pragma mark - event
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
 {
     NSLog(@"class:%@ \n eventName:%@ \n userInfo:%@", NSStringFromClass(self.class), eventName, userInfo);
+    
+    // 可以创建 EventProxy 对象，专门处理 Responder Chain 上传递的事件。
+    // [self.eventProxy handleEvent:eventName userInfo:userInfo];
 }
 
 #pragma mark - getter
@@ -69,6 +81,7 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.backgroundColor = [UIColor clearColor];
         _tableView.dataSource = self;
+        _tableView.delegate = self;
         _tableView.rowHeight = 60;
         _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
         _tableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectZero];
