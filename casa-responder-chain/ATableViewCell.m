@@ -10,10 +10,15 @@
 #import <HandyFrame/UIView+LayoutMethods.h>
 #import "UIResponder+Router.h"
 
+NSString * const ATableViewCellAEvent = @"ATableViewCell_AEvent";
+NSString * const ATableViewCellBEvent = @"ATableViewCell_BEvent";
+
 @interface ATableViewCell ()
 
 @property (nonatomic, strong) UILabel *titleLabel;
-@property (nonatomic, strong) UIButton *confirmButton;
+@property (nonatomic, strong) UIButton *aButton;
+@property (nonatomic, strong) UIButton *bButton;
+@property (nonatomic, copy) NSDictionary *eventStrategy;
 
 @end
 
@@ -25,7 +30,8 @@
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         [self.contentView addSubview:self.titleLabel];
-        [self.contentView addSubview:self.confirmButton];
+        [self.contentView addSubview:self.aButton];
+        [self.contentView addSubview:self.bButton];
     }
     return self;
 }
@@ -34,29 +40,54 @@
 {
     [super layoutSubviews];
     
-    CGFloat padding = 12;
+    CGFloat padding = 10;
+    CGFloat width = (self.width - padding * 4) / 3;
     
-    self.titleLabel.frame = CGRectMake(padding, 0, self.width * 0.5 - padding * 1.5, self.height);
-    self.confirmButton.frame = CGRectMake(self.titleLabel.right + padding * 0.5, 0, self.titleLabel.width, self.height * 0.5);
-    [self.confirmButton centerYEqualToView:self];
+    self.titleLabel.frame = CGRectMake(padding, 0, width, self.height);
+    self.aButton.frame = CGRectMake(self.titleLabel.right + padding, 0, width, self.height * 0.5);
+    [self.aButton centerYEqualToView:self];
+    self.bButton.frame = CGRectMake(self.aButton.right + padding, 0, width, self.aButton.height);
+    [self.bButton centerYEqualToView:self];
 }
 
 #pragma mark - event
 
-- (void)onClickConfirmButton
+- (void)onClickAButton
 {
-    NSLog(@"confirmButton log: %@", self.titleLabel.text);
+    NSLog(@"%s", __func__);
     
-    [self routerEventWithName:@"ATableViewCellConfirmButtonOnClick" userInfo:@{@"log" : (self.titleLabel.text ? self.titleLabel.text : @"")}];
+    [self routerEventWithName:ATableViewCellAEvent userInfo:@{@"aTitle" : (self.titleLabel.text ? self.titleLabel.text : @"")}];
+}
+
+- (void)onClickBButton
+{
+    NSLog(@"%s", __func__);
+    
+    [self routerEventWithName:ATableViewCellBEvent userInfo:@{@"bTitle" : (self.titleLabel.text ? self.titleLabel.text : @"")}];
 }
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
 {
-    NSMutableDictionary *mUserInfo = [NSMutableDictionary dictionaryWithDictionary:userInfo];
-    [mUserInfo setValue:NSStringFromClass(self.class) forKey:@"cell"];
+    NSInvocation *invocation = self.eventStrategy[eventName];
+    [invocation setArgument:&userInfo atIndex:2];
+    [invocation invoke];
     
     // 如果需要让事件继续往上传递，则调用下面的语句
-    [super routerEventWithName:eventName userInfo:mUserInfo];
+    // [super routerEventWithName:eventName userInfo:userInfo];
+}
+
+- (void)aEvent:(NSDictionary *)userInfo
+{
+    NSLog(@"不需要让事件继续往上传递 \n eventName:%@ \n userInfo:%@", ATableViewCellAEvent, userInfo);
+}
+
+- (void)bEvent:(NSDictionary *)userInfo
+{
+    NSMutableDictionary *mUserInfo = [NSMutableDictionary dictionaryWithDictionary:userInfo];
+    [mUserInfo setValue:NSStringFromClass(self.class) forKey:@"eventClass"];
+    
+    // 如果需要让事件继续往上传递，则调用下面的语句
+    [super routerEventWithName:ATableViewCellBEvent userInfo:mUserInfo];
 }
 
 #pragma mark - public method
@@ -77,17 +108,41 @@
     return _titleLabel;
 }
 
-- (UIButton *)confirmButton
+- (UIButton *)aButton
 {
-    if (!_confirmButton) {
-        _confirmButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _confirmButton.backgroundColor = [UIColor orangeColor];
-        _confirmButton.clipsToBounds = YES;
-        _confirmButton.layer.cornerRadius = 5;
-        [_confirmButton setTitle:@"log row" forState:UIControlStateNormal];
-        [_confirmButton addTarget:self action:@selector(onClickConfirmButton) forControlEvents:UIControlEventTouchUpInside];
+    if (!_aButton) {
+        _aButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _aButton.backgroundColor = [UIColor lightGrayColor];
+        _aButton.clipsToBounds = YES;
+        _aButton.layer.cornerRadius = 5;
+        [_aButton setTitle:@"A" forState:UIControlStateNormal];
+        [_aButton addTarget:self action:@selector(onClickAButton) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _confirmButton;
+    return _aButton;
+}
+
+- (UIButton *)bButton
+{
+    if (!_bButton) {
+        _bButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _bButton.backgroundColor = [UIColor darkGrayColor];
+        _bButton.clipsToBounds = YES;
+        _bButton.layer.cornerRadius = 5;
+        [_bButton setTitle:@"B" forState:UIControlStateNormal];
+        [_bButton addTarget:self action:@selector(onClickBButton) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _bButton;
+}
+
+- (NSDictionary<NSString *, NSInvocation *> *)eventStrategy
+{
+    if (!_eventStrategy) {
+        _eventStrategy = @{
+                           ATableViewCellAEvent: [self createInvocationWithSelector:@selector(aEvent:)],
+                           ATableViewCellBEvent: [self createInvocationWithSelector:@selector(bEvent:)]
+                           };
+    }
+    return _eventStrategy;
 }
 
 @end

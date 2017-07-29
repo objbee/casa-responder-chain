@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const ATableViewCellAEvent;
+extern NSString * const ATableViewCellBEvent;
+
 @interface ATableViewCell : UITableViewCell
 
 - (void)configWithIndexPathRow:(NSInteger)row;

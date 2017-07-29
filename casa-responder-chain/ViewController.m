@@ -58,7 +58,7 @@
 
 - (void)routerEventWithName:(NSString *)eventName userInfo:(NSDictionary *)userInfo
 {
-    NSLog(@"self.class:%@ \n eventName:%@ \n userInfo:%@", NSStringFromClass(self.class), eventName, userInfo);
+    NSLog(@"class:%@ \n eventName:%@ \n userInfo:%@", NSStringFromClass(self.class), eventName, userInfo);
 }
 
 #pragma mark - getter
